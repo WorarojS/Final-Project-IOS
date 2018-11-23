@@ -9,14 +9,14 @@
 import Foundation
 
 class MyList: NSObject, NSCoding {
-    private var _detail: String!
+    private var _name: String!
     private var _imgName: String!
     private var _type: String!
 //    private var _date: String!
     
-    var detail: String
+    var name: String
     {
-        return _detail
+        return _name
     }
     
     var imgName: String
@@ -34,8 +34,8 @@ class MyList: NSObject, NSCoding {
 //        return _date
 //    }
     
-    init(detail: String, imgName: String, type: String /*date: String*/) {
-        self._detail = detail
+    init(name: String, imgName: String, type: String /*date: String*/) {
+        self._name = name
         self._imgName = imgName
         self._type = type
 //        self._date = date
@@ -47,14 +47,14 @@ class MyList: NSObject, NSCoding {
     }
     required convenience init?(coder aDecoder: NSCoder) {
         self.init()
-        self._detail = aDecoder.decodeObject(forKey: "detail") as? String
+        self._name = aDecoder.decodeObject(forKey: "name") as? String
         self._imgName = aDecoder.decodeObject(forKey: "imageName") as? String
         self._type = aDecoder.decodeObject(forKey: "type") as? String
 //        self._date = aDecoder.decodeObject(forKey: "date") as? String
     }
     
     func encode(with aCoder: NSCoder) {
-        aCoder.encode(self._detail, forKey: "detail")
+        aCoder.encode(self._name, forKey: "name")
         aCoder.encode(self._imgName, forKey: "imageName")
         aCoder.encode(self._type, forKey: "type")
 //        aCoder.encode(self._date, forKey: "date")

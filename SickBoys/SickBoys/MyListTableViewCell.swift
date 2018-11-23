@@ -24,7 +24,7 @@ class MyListTableViewCell: UITableViewCell {
     // get data and display to ui
     func setData(myList: MyList) {
         myListImg.image = UIImage(named: "logo")
-        nameLbl.text = myList.detail
+        nameLbl.text = myList.name
         typeLbl.text = myList.type
 //        dateLbl.text = myList.date
         

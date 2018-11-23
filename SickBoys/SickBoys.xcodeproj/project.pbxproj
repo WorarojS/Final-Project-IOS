@@ -121,6 +121,7 @@
 			children = (
 				BEE86AB7218A4DA0001E3FDD /* ViewController */,
 				BE14137C218A18C2003C9E0E /* AppDelegate.swift */,
+				BE141380218A18C2003C9E0E /* Main.storyboard */,
 				BE5AB19B21A5CFD200B8CF1C /* DataManager.swift */,
 				BE5AB19721A3AB2A00B8CF1C /* MyList.swift */,
 				BE141383218A18C8003C9E0E /* Assets.xcassets */,
@@ -170,7 +171,6 @@
 				BE67988321A773400068F4E3 /* MyListTableViewCell.swift */,
 				BEA6B32A2195F386002C6A6F /* AddNewListViewController.swift */,
 				BEE86AC0218A51FE001E3FDD /* AboutViewController.swift */,
-				BE141380218A18C2003C9E0E /* Main.storyboard */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";

@@ -534,54 +534,53 @@
                                     <action selector="selectPhotoBtn:" destination="dIR-kO-dhB" eventType="touchUpInside" id="29y-3i-V8i"/>
                                 </connections>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Review" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="DKj-WQ-eGZ">
-                                <rect key="frame" x="67" y="443" width="240" height="128"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="240" id="Vde-N6-azf"/>
-                                    <constraint firstAttribute="height" constant="128" id="uVT-Zn-e21"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ajJ-0Z-rdE">
-                                <rect key="frame" x="170" y="644" width="34" height="30"/>
-                                <state key="normal" title="Save"/>
-                                <connections>
-                                    <action selector="saveBtn:" destination="dIR-kO-dhB" eventType="touchUpInside" id="OFe-1s-p9r"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Type:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AiP-qi-aJN">
-                                <rect key="frame" x="67" y="581" width="35.666666666666657" height="17"/>
+                                <rect key="frame" x="67" y="458" width="35.666666666666657" height="17"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="select type" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NOv-aq-Ql1">
-                                <rect key="frame" x="107.66666666666667" y="576" width="199.33333333333331" height="30"/>
+                                <rect key="frame" x="107.66666666666669" y="453" width="95" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="95" id="J4P-Nj-ajg"/>
+                                </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Btl-Yq-jRc">
+                                <rect key="frame" x="67" y="403" width="240" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="j1q-K1-vay"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ajJ-0Z-rdE">
+                                <rect key="frame" x="170" y="703" width="34" height="30"/>
+                                <state key="normal" title="Save"/>
+                                <connections>
+                                    <action selector="saveBtn:" destination="dIR-kO-dhB" eventType="touchUpInside" id="OFe-1s-p9r"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="Wb1-wy-KgR" firstAttribute="bottom" secondItem="ajJ-0Z-rdE" secondAttribute="bottom" constant="45" id="16P-Ga-QXZ"/>
                             <constraint firstItem="ajJ-0Z-rdE" firstAttribute="leading" secondItem="Wb1-wy-KgR" secondAttribute="leading" constant="170" id="4Es-e5-dcB"/>
+                            <constraint firstItem="NOv-aq-Ql1" firstAttribute="top" secondItem="Btl-Yq-jRc" secondAttribute="bottom" constant="20" id="7uH-fa-pph"/>
                             <constraint firstItem="KDb-Pn-E4o" firstAttribute="centerY" secondItem="6Bw-Hq-cUq" secondAttribute="centerY" id="97W-Xf-NZn"/>
-                            <constraint firstItem="DKj-WQ-eGZ" firstAttribute="leading" secondItem="Wb1-wy-KgR" secondAttribute="leading" constant="67" id="DYE-vz-lGQ"/>
-                            <constraint firstItem="AiP-qi-aJN" firstAttribute="top" secondItem="DKj-WQ-eGZ" secondAttribute="bottom" constant="10" id="Erm-8u-sAz"/>
+                            <constraint firstItem="Btl-Yq-jRc" firstAttribute="leading" secondItem="Wb1-wy-KgR" secondAttribute="leading" constant="67" id="AOL-XC-mad"/>
+                            <constraint firstItem="AiP-qi-aJN" firstAttribute="top" secondItem="Btl-Yq-jRc" secondAttribute="bottom" constant="25" id="DJ2-dy-DiH"/>
                             <constraint firstItem="KDb-Pn-E4o" firstAttribute="height" secondItem="6Bw-Hq-cUq" secondAttribute="height" id="HL6-NF-sio"/>
-                            <constraint firstItem="ajJ-0Z-rdE" firstAttribute="top" secondItem="DKj-WQ-eGZ" secondAttribute="bottom" constant="73" id="KH4-6l-Stn"/>
-                            <constraint firstItem="NOv-aq-Ql1" firstAttribute="top" secondItem="DKj-WQ-eGZ" secondAttribute="bottom" constant="5" id="OaM-Mc-j5f"/>
                             <constraint firstItem="KDb-Pn-E4o" firstAttribute="centerX" secondItem="6Bw-Hq-cUq" secondAttribute="centerX" id="Pxf-A5-zn7"/>
                             <constraint firstItem="NOv-aq-Ql1" firstAttribute="leading" secondItem="AiP-qi-aJN" secondAttribute="trailing" constant="5" id="SWR-CL-qIF"/>
-                            <constraint firstItem="ajJ-0Z-rdE" firstAttribute="top" secondItem="DKj-WQ-eGZ" secondAttribute="bottom" constant="73" id="f8e-pc-nNc"/>
                             <constraint firstItem="6Bw-Hq-cUq" firstAttribute="leading" secondItem="Wb1-wy-KgR" secondAttribute="leading" constant="67" id="ghh-0X-0Yc"/>
-                            <constraint firstItem="Wb1-wy-KgR" firstAttribute="trailing" secondItem="NOv-aq-Ql1" secondAttribute="trailing" constant="68" id="j8D-K3-ikV"/>
+                            <constraint firstItem="Btl-Yq-jRc" firstAttribute="top" secondItem="KDb-Pn-E4o" secondAttribute="bottom" constant="25" id="kYG-gS-iFW"/>
                             <constraint firstItem="Wb1-wy-KgR" firstAttribute="trailing" secondItem="ajJ-0Z-rdE" secondAttribute="trailing" constant="171" id="kb3-S3-dtS"/>
-                            <constraint firstItem="DKj-WQ-eGZ" firstAttribute="top" secondItem="6Bw-Hq-cUq" secondAttribute="bottom" constant="65" id="lAD-5d-Vit"/>
-                            <constraint firstItem="DKj-WQ-eGZ" firstAttribute="top" secondItem="KDb-Pn-E4o" secondAttribute="bottom" constant="65" id="mn5-En-PJv"/>
-                            <constraint firstItem="Wb1-wy-KgR" firstAttribute="trailing" secondItem="DKj-WQ-eGZ" secondAttribute="trailing" constant="68" id="p1l-JR-Fal"/>
+                            <constraint firstItem="Wb1-wy-KgR" firstAttribute="trailing" secondItem="Btl-Yq-jRc" secondAttribute="trailing" constant="68" id="lDJ-jo-cyO"/>
                             <constraint firstItem="KDb-Pn-E4o" firstAttribute="top" secondItem="Wb1-wy-KgR" secondAttribute="top" constant="50" id="qIJ-0y-47Q"/>
                             <constraint firstItem="Wb1-wy-KgR" firstAttribute="trailing" secondItem="6Bw-Hq-cUq" secondAttribute="trailing" constant="68" id="qrd-PZ-gYI"/>
                             <constraint firstItem="KDb-Pn-E4o" firstAttribute="width" secondItem="6Bw-Hq-cUq" secondAttribute="width" id="sOQ-F0-ulC"/>
@@ -592,7 +591,7 @@
                     <navigationItem key="navigationItem" title="Add new list" id="EIf-rD-nHA"/>
                     <connections>
                         <outlet property="ImgView" destination="6Bw-Hq-cUq" id="mF7-ww-qpd"/>
-                        <outlet property="reviewTxt" destination="DKj-WQ-eGZ" id="5eQ-4D-0t0"/>
+                        <outlet property="nameTxt" destination="Btl-Yq-jRc" id="O9Y-BO-8fR"/>
                         <outlet property="typeTxt" destination="NOv-aq-Ql1" id="60U-fP-qnR"/>
                     </connections>
                 </viewController>

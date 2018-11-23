@@ -9,24 +9,26 @@
 import UIKit
 
 
-class AddNewListViewController: UIViewController, UITextViewDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class AddNewListViewController: UIViewController, UITextFieldDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
-    @IBOutlet weak var reviewTxt: UITextView!
+//    @IBOutlet weak var reviewTxt: UITextView!
+    @IBOutlet weak var nameTxt: UITextField!
     @IBOutlet weak var ImgView: UIImageView!
     var imagePicker: UIImagePickerController!
     let type = ["Sativa","Hybrid","Indica"]
     var selectedType: String?
     @IBOutlet weak var typeTxt: UITextField!
-//    @IBOutlet weak var dateTxt: UITextField!
+    
+    //    @IBOutlet weak var dateTxt: UITextField!
     override func viewDidLoad()
     {
         super.viewDidLoad()
         
          //Review Textview
-        self.reviewTxt.delegate = self
+        self.nameTxt.delegate = self 
         //Boarder for Textview
-        reviewTxt!.layer.borderWidth = 1
-        reviewTxt!.layer.borderColor = UIColor.gray.cgColor
+//        reviewTxt!.layer.borderWidth = 1
+//        reviewTxt!.layer.borderColor = UIColor.gray.cgColor
         
         // select Image
         imagePicker = UIImagePickerController()
@@ -76,14 +78,14 @@ class AddNewListViewController: UIViewController, UITextViewDelegate, UIImagePic
     // save button action
     @IBAction func saveBtn(_ sender: Any)
     {
-        if let strDetail = reviewTxt.text ,
+        if let names = nameTxt.text ,
             let img = ImgView.image,
             let types = typeTxt.text
 //            let dates = dateTxt.text
         {
             let imgName = DataManager.instance.saveImageToFile(image: img)
             let myList = MyList(
-                detail: strDetail,
+                name: names,
                 imgName: imgName,
                 type: types
                 /*date: dates*/)
