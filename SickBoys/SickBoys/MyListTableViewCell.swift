@@ -13,7 +13,8 @@ class MyListTableViewCell: UITableViewCell {
     @IBOutlet weak var nameLbl: UILabel!
     @IBOutlet weak var myListImg: UIImageView!
     @IBOutlet weak var typeLbl: UITextField!
-//    @IBOutlet weak var dateLbl: UITextField!
+    @IBOutlet weak var dateLbl: UITextField!
+    //    @IBOutlet weak var dateLbl: UITextField!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -23,10 +24,11 @@ class MyListTableViewCell: UITableViewCell {
     
     // get data and display to ui
     func setData(myList: MyList) {
-        myListImg.image = UIImage(named: "logo")
+//        myListImg.image = UIImage(named: "logo")
+        myListImg.image = DataManager.instance.getImageFromFile(imgName: myList.imgName)
         nameLbl.text = myList.name
         typeLbl.text = myList.type
-//        dateLbl.text = myList.date
+        dateLbl.text = myList.date
         
         // change bg and txtclr
         if myList.type == "Sativa"

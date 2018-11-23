@@ -9,15 +9,18 @@
 import UIKit
 
 
-class AddNewListViewController: UIViewController, UITextFieldDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class AddNewListViewController: UIViewController, UITextFieldDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextViewDelegate {
 
-//    @IBOutlet weak var reviewTxt: UITextView!
     @IBOutlet weak var nameTxt: UITextField!
     @IBOutlet weak var ImgView: UIImageView!
+    @IBOutlet weak var dateTxt: UITextField!
+    @IBOutlet weak var typeTxt: UITextField!
+    @IBOutlet weak var reviewTxt: UITextView!
+    
+    
     var imagePicker: UIImagePickerController!
     let type = ["Sativa","Hybrid","Indica"]
     var selectedType: String?
-    @IBOutlet weak var typeTxt: UITextField!
     
     //    @IBOutlet weak var dateTxt: UITextField!
     override func viewDidLoad()
@@ -25,10 +28,11 @@ class AddNewListViewController: UIViewController, UITextFieldDelegate, UIImagePi
         super.viewDidLoad()
         
          //Review Textview
-        self.nameTxt.delegate = self 
-        //Boarder for Textview
-//        reviewTxt!.layer.borderWidth = 1
-//        reviewTxt!.layer.borderColor = UIColor.gray.cgColor
+        self.nameTxt.delegate = self
+        self.reviewTxt.delegate = self
+        
+        reviewTxt!.layer.borderWidth = 1
+        reviewTxt!.layer.borderColor = UIColor.gray.cgColor
         
         // select Image
         imagePicker = UIImagePickerController()
@@ -41,21 +45,17 @@ class AddNewListViewController: UIViewController, UITextFieldDelegate, UIImagePi
         createTypePicker()
         createToolbar()
         
+        // auto generate date
+        let date = Date()
+        let formatter = DateFormatter()
+        formatter.dateFormat = "dd.MM.yyyy"
+        let result = formatter.string(from: date)
+        // auto set date on TextField
+        dateTxt.text = result
+        
     }
     
-//    @IBAction func dateBtn(_ button: UIButton) {
-//        convertDateFormatter()
-//        button.isHidden = true
-//
-//    }
-//
-//    func convertDateFormatter(){
-//        let date = Date()
-//        let formatter = DateFormatter()
-//        formatter.dateFormat = "dd-MM-yyyy" // change format as per needs
-//        let result = formatter.string(from: date)
-//        return dateTxt.text = result
-//    }
+
     
     
     //--------------------------------
@@ -75,29 +75,6 @@ class AddNewListViewController: UIViewController, UITextFieldDelegate, UIImagePi
         dismiss(animated: true, completion: nil)
     }
     
-    // save button action
-    @IBAction func saveBtn(_ sender: Any)
-    {
-        if let names = nameTxt.text ,
-            let img = ImgView.image,
-            let types = typeTxt.text
-//            let dates = dateTxt.text
-        {
-            let imgName = DataManager.instance.saveImageToFile(image: img)
-            let myList = MyList(
-                name: names,
-                imgName: imgName,
-                type: types
-                /*date: dates*/)
-            DataManager.instance.addMyList(myList: myList)
-            // close VC after save
-            navigationController?.popViewController(animated: true)
-            dismiss(animated: true, completion: nil)
-            // print save after succesful save
-            print("save sucesfully")
-        }
-    }
-
     //--------------------------------
 
     // select image
@@ -172,4 +149,34 @@ extension AddNewListViewController: UIPickerViewDelegate, UIPickerViewDataSource
         selectedType = type[row]
         typeTxt.text = selectedType
     }
+    
+    
+    // save button action
+    @IBAction func saveBtn(_ sender: Any)
+    {
+        
+        if let names = nameTxt.text,
+            let img = ImgView.image,
+            let types = typeTxt.text,
+            let dates = dateTxt.text,
+            let reviews = reviewTxt.text
+        {
+            let imgName = DataManager.instance.saveImageToFile(image: img)
+            let myList = MyList(
+                name: names,
+                imgName: imgName,
+                type: types,
+                date: dates,
+                review: reviews)
+            
+            DataManager.instance.addMyList(myList: myList)
+            // close VC after save
+            navigationController?.popViewController(animated: true)
+            dismiss(animated: true, completion: nil)
+            // print save after succesful save
+            print("save sucesfully")
+        }
+    }
+
+    
 }

@@ -22,6 +22,13 @@ class MyListViewController: UIViewController, UITableViewDelegate, UITableViewDa
         sideMenu()
         DataManager.instance.loadMyList()
         
+        NotificationCenter.default.addObserver(self, selector: #selector(MyListViewController.reloadMyList(notif:)), name: NSNotification.Name(rawValue: "myListLoad"), object: nil)
+        
+    }
+    
+    @objc func reloadMyList(notif: Any)
+    {
+        tableView.reloadData()
     }
     // slide menu bat on left side
     func sideMenu()

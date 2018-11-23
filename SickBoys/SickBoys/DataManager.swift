@@ -25,15 +25,17 @@ class DataManager{
         if let myListData = UserDefaults.standard.object(forKey: MYLIST_KEY) as? NSData
         {
             if let myListArray = NSKeyedUnarchiver.unarchiveObject(with: myListData as Data) as? [MyList]
+
             {
                 _myMyLists = myListArray
             }
         }
+        NotificationCenter.default.post(NSNotification(name: NSNotification.Name(rawValue: "myListLoad"), object: (Any).self) as Notification)
     }
-    
     
     func saveMyLists(){
         let myListData = NSKeyedArchiver.archivedData(withRootObject: _myMyLists)
+//        let myListData = NSKeyedArchiver.archivedData(withRootObject: _myMyLists, requiringSecureCoding: true)
         UserDefaults.standard.set(myListData, forKey: MYLIST_KEY)
         UserDefaults.standard.synchronize()
     }
@@ -41,13 +43,13 @@ class DataManager{
     
     func saveImageToFile(image: UIImage) -> String
     {
-        let imgName = "image.png"
+        let imgName = "image\(NSDate.timeIntervalSinceReferenceDate).png"
         if let imgData = image.pngData()
             
         {
             do{
             let fullPath = URL(fileURLWithPath: NSTemporaryDirectory()).appendingPathComponent (imgName)
-                let result = try imgData.write(to: fullPath, options: .atomic)
+                _ = try imgData.write(to: fullPath, options: .atomic)
             }catch{
                 print(error)
             }
@@ -68,5 +70,27 @@ class DataManager{
         _myMyLists.append(myList)
         saveMyLists()
         loadMyList()
+    }
+    
+    func getImageFromFile(imgName: String) -> UIImage!
+    {
+        let imgPath = fileInDocumentDirectory(fileName: imgName)
+        
+        if let image = UIImage(contentsOfFile: imgPath!){
+            return image
+        }
+        else{
+            print ("no photo")
+            return nil
+        }
+    }
+    
+    func fileInDocumentDirectory(fileName: String) -> String!
+    {
+        let documentUrl = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
+        
+        let fileUrl = documentUrl.appendingPathComponent(fileName)
+        
+        return fileUrl.path
     }
 }
