@@ -7,14 +7,14 @@
 //
 
 import UIKit
+import CoreData
 
 class MyListTableViewCell: UITableViewCell {
     
-    @IBOutlet weak var nameLbl: UILabel!
     @IBOutlet weak var myListImg: UIImageView!
+    @IBOutlet weak var nameLbl: UILabel!
     @IBOutlet weak var typeLbl: UITextField!
     @IBOutlet weak var dateLbl: UITextField!
-    //    @IBOutlet weak var dateLbl: UITextField!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -22,15 +22,15 @@ class MyListTableViewCell: UITableViewCell {
         
     }
     
-    // get data and display to ui
-    func setData(myList: MyList) {
-//        myListImg.image = UIImage(named: "logo")
-        myListImg.image = DataManager.instance.getImageFromFile(imgName: myList.imgName)
+    
+    //-------------------------------- get value from DB and set  it to UI
+    func setValue(myList: MyList)
+    {
+        myListImg.image = myList.getProductImage()
         nameLbl.text = myList.name
         typeLbl.text = myList.type
         dateLbl.text = myList.date
-        
-        // change bg and txtclr
+        //-------------------------------- change txtBG color
         if myList.type == "Sativa"
         {
             typeLbl.backgroundColor = UIColor.red

@@ -21,6 +21,9 @@
 		BE67988821A7A08B0068F4E3 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE67988721A7A08B0068F4E3 /* DetailViewController.swift */; };
 		BE93B39F218A3476000FC578 /* PopularViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE93B39E218A3476000FC578 /* PopularViewController.swift */; };
 		BEA6B32B2195F386002C6A6F /* AddNewListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA6B32A2195F386002C6A6F /* AddNewListViewController.swift */; };
+		BEB7A7D121A80BDD00DE1CB6 /* sickBoys.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BEB7A7CF21A80BDD00DE1CB6 /* sickBoys.xcdatamodeld */; };
+		BEB7A7D421A80C7F00DE1CB6 /* MyList+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEB7A7D221A80C7F00DE1CB6 /* MyList+CoreDataClass.swift */; };
+		BEB7A7D521A80C7F00DE1CB6 /* MyList+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEB7A7D321A80C7F00DE1CB6 /* MyList+CoreDataProperties.swift */; };
 		BEE86ABB218A4E0A001E3FDD /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEE86ABA218A4E0A001E3FDD /* NewsViewController.swift */; };
 		BEE86ABD218A4FD4001E3FDD /* NewestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEE86ABC218A4FD4001E3FDD /* NewestViewController.swift */; };
 		BEE86ABF218A50AD001E3FDD /* MyListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEE86ABE218A50AD001E3FDD /* MyListViewController.swift */; };
@@ -67,6 +70,9 @@
 		BE67988721A7A08B0068F4E3 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		BE93B39E218A3476000FC578 /* PopularViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularViewController.swift; sourceTree = "<group>"; };
 		BEA6B32A2195F386002C6A6F /* AddNewListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewListViewController.swift; sourceTree = "<group>"; };
+		BEB7A7D021A80BDD00DE1CB6 /* sickBoys.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = sickBoys.xcdatamodel; sourceTree = "<group>"; };
+		BEB7A7D221A80C7F00DE1CB6 /* MyList+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MyList+CoreDataClass.swift"; sourceTree = "<group>"; };
+		BEB7A7D321A80C7F00DE1CB6 /* MyList+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MyList+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		BEE86ABA218A4E0A001E3FDD /* NewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewController.swift; sourceTree = "<group>"; };
 		BEE86ABC218A4FD4001E3FDD /* NewestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewestViewController.swift; sourceTree = "<group>"; };
 		BEE86ABE218A50AD001E3FDD /* MyListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyListViewController.swift; sourceTree = "<group>"; };
@@ -101,6 +107,8 @@
 		BE141370218A18C2003C9E0E = {
 			isa = PBXGroup;
 			children = (
+				BEB7A7D221A80C7F00DE1CB6 /* MyList+CoreDataClass.swift */,
+				BEB7A7D321A80C7F00DE1CB6 /* MyList+CoreDataProperties.swift */,
 				BE14137B218A18C2003C9E0E /* SickBoys */,
 				BE141390218A18C8003C9E0E /* SickBoysTests */,
 				BE14139B218A18C8003C9E0E /* SickBoysUITests */,
@@ -121,15 +129,15 @@
 		BE14137B218A18C2003C9E0E /* SickBoys */ = {
 			isa = PBXGroup;
 			children = (
-				BEE86AB7218A4DA0001E3FDD /* ViewController */,
 				BE14137C218A18C2003C9E0E /* AppDelegate.swift */,
+				BEB7A7CF21A80BDD00DE1CB6 /* sickBoys.xcdatamodeld */,
 				BE141380218A18C2003C9E0E /* Main.storyboard */,
-				BE5AB19B21A5CFD200B8CF1C /* DataManager.swift */,
-				BE5AB19721A3AB2A00B8CF1C /* MyList.swift */,
 				BE141383218A18C8003C9E0E /* Assets.xcassets */,
 				BE141385218A18C8003C9E0E /* LaunchScreen.storyboard */,
 				BE141388218A18C8003C9E0E /* Info.plist */,
 				BE1413AA218A1981003C9E0E /* SickBoys-Bridging-Header.h */,
+				BEE86AB7218A4DA0001E3FDD /* ViewController */,
+				BEB7A7CE21A80B1900DE1CB6 /* unuse */,
 				BE93B39A218A2F0E000FC578 /* NavBar */,
 			);
 			path = SickBoys;
@@ -160,6 +168,15 @@
 				BE1413AC218A1982003C9E0E /* SWRevealViewController.m */,
 			);
 			path = NavBar;
+			sourceTree = "<group>";
+		};
+		BEB7A7CE21A80B1900DE1CB6 /* unuse */ = {
+			isa = PBXGroup;
+			children = (
+				BE5AB19B21A5CFD200B8CF1C /* DataManager.swift */,
+				BE5AB19721A3AB2A00B8CF1C /* MyList.swift */,
+			);
+			path = unuse;
 			sourceTree = "<group>";
 		};
 		BEE86AB7218A4DA0001E3FDD /* ViewController */ = {
@@ -313,8 +330,11 @@
 				BE67988821A7A08B0068F4E3 /* DetailViewController.swift in Sources */,
 				BE5AB19C21A5CFD200B8CF1C /* DataManager.swift in Sources */,
 				BEE86ABD218A4FD4001E3FDD /* NewestViewController.swift in Sources */,
+				BEB7A7D421A80C7F00DE1CB6 /* MyList+CoreDataClass.swift in Sources */,
 				BE93B39F218A3476000FC578 /* PopularViewController.swift in Sources */,
+				BEB7A7D121A80BDD00DE1CB6 /* sickBoys.xcdatamodeld in Sources */,
 				BEE86ABF218A50AD001E3FDD /* MyListViewController.swift in Sources */,
+				BEB7A7D521A80C7F00DE1CB6 /* MyList+CoreDataProperties.swift in Sources */,
 				BE1413AF218A2003003C9E0E /* ViewController.swift in Sources */,
 				BE67988421A773400068F4E3 /* MyListTableViewCell.swift in Sources */,
 				BE14137D218A18C2003C9E0E /* AppDelegate.swift in Sources */,
@@ -650,6 +670,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		BEB7A7CF21A80BDD00DE1CB6 /* sickBoys.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				BEB7A7D021A80BDD00DE1CB6 /* sickBoys.xcdatamodel */,
+			);
+			currentVersion = BEB7A7D021A80BDD00DE1CB6 /* sickBoys.xcdatamodel */;
+			path = sickBoys.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = BE141371218A18C2003C9E0E /* Project object */;
 }

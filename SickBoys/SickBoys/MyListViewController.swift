@@ -7,29 +7,87 @@
 //
 
 import UIKit
+import CoreData
 
 class MyListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource{
 
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var menuButton: UIBarButtonItem!
+    
+    var MyLists = [MyList]()
 
     override func viewDidLoad()
     {
         super.viewDidLoad()
+        
         tableView.delegate = self
         tableView.dataSource = self
 
         sideMenu()
-        DataManager.instance.loadMyList()
         
-        NotificationCenter.default.addObserver(self, selector: #selector(MyListViewController.reloadMyList(notif:)), name: NSNotification.Name(rawValue: "myListLoad"), object: nil)
+        refreshCoreData()
+        tableView.reloadData()
+
         
     }
     
-    @objc func reloadMyList(notif: Any)
+    //-------------------------------- refresh to see update cell after save
+    func refreshCoreData()
     {
-        tableView.reloadData()
+        let app = UIApplication.shared.delegate as! AppDelegate
+        let context = app.persistentContainer.viewContext
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "MyList")
+        
+        do
+        {
+            let results = try context.fetch(fetchRequest)
+            self.MyLists = results as! [MyList]
+        }
+        catch let error as NSError
+        {
+            print(error.debugDescription)
+        }
     }
+    
+    //display tableView
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
+    {
+        return MyLists.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
+    {
+        if let cell = tableView.dequeueReusableCell(withIdentifier: "MyListTableViewCell") as? MyListTableViewCell
+        {
+            let myList = MyLists[indexPath.row]
+            cell.setValue(myList: myList)
+            return cell
+        }
+        else
+        {
+            return MyListTableViewCell()
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let Storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let DvC = Storyboard.instantiateViewController(withIdentifier: "DetailViewController") as! DetailViewController
+        
+        DvC.getMyLists = [MyLists[indexPath.row]]
+        self.navigationController?.pushViewController(DvC, animated: true)
+        
+    }
+    
+    
+   
+
+    
+   
     // slide menu bat on left side
     func sideMenu()
     {
@@ -43,34 +101,6 @@ class MyListViewController: UIViewController, UITableViewDelegate, UITableViewDa
         }
     }
     
-    //display tableView
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
-    {
-        return DataManager.instance.myMyLists.count
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
-    {
-        
-        let myList = DataManager.instance.myMyLists[indexPath.row]
-        if let cell = tableView.dequeueReusableCell(withIdentifier: "MyListTableViewCell") as? MyListTableViewCell
-        {
-            cell.setData(myList: myList)
-            return cell
-        }else
-        {
-            let cell = MyListTableViewCell()
-            cell.setData(myList: myList)
-            return cell
-        }
-    }
-    
-    // set hight of each cell
-//    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-//       // return CGFloat((arc4random() % UInt32(500)) + 100 )
-//
-//        let cellHeight = tableView.frame.width + 90
-//        return cellHeight
-//    }
+
 }
 
