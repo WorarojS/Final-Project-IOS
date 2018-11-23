@@ -15,7 +15,11 @@
 		BE14139D218A18C8003C9E0E /* SickBoysUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE14139C218A18C8003C9E0E /* SickBoysUITests.swift */; };
 		BE1413AD218A1982003C9E0E /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE1413AC218A1982003C9E0E /* SWRevealViewController.m */; };
 		BE1413AF218A2003003C9E0E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE1413AE218A2003003C9E0E /* ViewController.swift */; };
+		BE5AB19821A3AB2A00B8CF1C /* MyList.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5AB19721A3AB2A00B8CF1C /* MyList.swift */; };
+		BE5AB19C21A5CFD200B8CF1C /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5AB19B21A5CFD200B8CF1C /* DataManager.swift */; };
+		BE67988421A773400068F4E3 /* MyListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE67988321A773400068F4E3 /* MyListTableViewCell.swift */; };
 		BE93B39F218A3476000FC578 /* PopularViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE93B39E218A3476000FC578 /* PopularViewController.swift */; };
+		BEA6B32B2195F386002C6A6F /* AddNewListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA6B32A2195F386002C6A6F /* AddNewListViewController.swift */; };
 		BEE86ABB218A4E0A001E3FDD /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEE86ABA218A4E0A001E3FDD /* NewsViewController.swift */; };
 		BEE86ABD218A4FD4001E3FDD /* NewestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEE86ABC218A4FD4001E3FDD /* NewestViewController.swift */; };
 		BEE86ABF218A50AD001E3FDD /* MyListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEE86ABE218A50AD001E3FDD /* MyListViewController.swift */; };
@@ -56,7 +60,11 @@
 		BE1413AB218A1982003C9E0E /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
 		BE1413AC218A1982003C9E0E /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
 		BE1413AE218A2003003C9E0E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		BE5AB19721A3AB2A00B8CF1C /* MyList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyList.swift; sourceTree = "<group>"; };
+		BE5AB19B21A5CFD200B8CF1C /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		BE67988321A773400068F4E3 /* MyListTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyListTableViewCell.swift; sourceTree = "<group>"; };
 		BE93B39E218A3476000FC578 /* PopularViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularViewController.swift; sourceTree = "<group>"; };
+		BEA6B32A2195F386002C6A6F /* AddNewListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewListViewController.swift; sourceTree = "<group>"; };
 		BEE86ABA218A4E0A001E3FDD /* NewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewController.swift; sourceTree = "<group>"; };
 		BEE86ABC218A4FD4001E3FDD /* NewestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewestViewController.swift; sourceTree = "<group>"; };
 		BEE86ABE218A50AD001E3FDD /* MyListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyListViewController.swift; sourceTree = "<group>"; };
@@ -112,8 +120,9 @@
 			isa = PBXGroup;
 			children = (
 				BEE86AB7218A4DA0001E3FDD /* ViewController */,
-				BE141380218A18C2003C9E0E /* Main.storyboard */,
 				BE14137C218A18C2003C9E0E /* AppDelegate.swift */,
+				BE5AB19B21A5CFD200B8CF1C /* DataManager.swift */,
+				BE5AB19721A3AB2A00B8CF1C /* MyList.swift */,
 				BE141383218A18C8003C9E0E /* Assets.xcassets */,
 				BE141385218A18C8003C9E0E /* LaunchScreen.storyboard */,
 				BE141388218A18C8003C9E0E /* Info.plist */,
@@ -158,7 +167,10 @@
 				BEE86ABA218A4E0A001E3FDD /* NewsViewController.swift */,
 				BEE86ABC218A4FD4001E3FDD /* NewestViewController.swift */,
 				BEE86ABE218A50AD001E3FDD /* MyListViewController.swift */,
+				BE67988321A773400068F4E3 /* MyListTableViewCell.swift */,
+				BEA6B32A2195F386002C6A6F /* AddNewListViewController.swift */,
 				BEE86AC0218A51FE001E3FDD /* AboutViewController.swift */,
+				BE141380218A18C2003C9E0E /* Main.storyboard */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -295,14 +307,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BE5AB19C21A5CFD200B8CF1C /* DataManager.swift in Sources */,
 				BEE86ABD218A4FD4001E3FDD /* NewestViewController.swift in Sources */,
 				BE93B39F218A3476000FC578 /* PopularViewController.swift in Sources */,
 				BEE86ABF218A50AD001E3FDD /* MyListViewController.swift in Sources */,
 				BE1413AF218A2003003C9E0E /* ViewController.swift in Sources */,
+				BE67988421A773400068F4E3 /* MyListTableViewCell.swift in Sources */,
 				BE14137D218A18C2003C9E0E /* AppDelegate.swift in Sources */,
+				BEA6B32B2195F386002C6A6F /* AddNewListViewController.swift in Sources */,
 				BEE86ABB218A4E0A001E3FDD /* NewsViewController.swift in Sources */,
 				BEE86AC1218A51FE001E3FDD /* AboutViewController.swift in Sources */,
 				BE1413AD218A1982003C9E0E /* SWRevealViewController.m in Sources */,
+				BE5AB19821A3AB2A00B8CF1C /* MyList.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

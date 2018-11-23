@@ -11,7 +11,8 @@ import UIKit
 class AboutViewController: UIViewController {
 
     @IBOutlet weak var menuButton: UIBarButtonItem!
-    override func viewDidLoad() {
+    override func viewDidLoad()
+    {
         super.viewDidLoad()
         sideMenu()
     }
@@ -19,7 +20,8 @@ class AboutViewController: UIViewController {
     // slide menu bat on left side
     func sideMenu()
     {
-        if revealViewController() != nil{
+        if revealViewController() != nil
+        {
             menuButton.target = revealViewController()
             menuButton.action = #selector(SWRevealViewController.revealToggle(_:))
             revealViewController()?.rearViewRevealWidth = 275

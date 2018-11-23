@@ -9,16 +9,19 @@
 import UIKit
 
 class ViewController: UIViewController {
+  
+    
 
     @IBOutlet weak var menuButton: UIBarButtonItem!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+       
+
         sideMenu()
 
-      
     }
+
         func sideMenu()
         {
             if revealViewController() != nil{
@@ -29,9 +32,4 @@ class ViewController: UIViewController {
                 view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
             }
         }
-    
-    
-  
-
-    
 }
