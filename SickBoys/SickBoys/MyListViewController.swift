@@ -13,22 +13,21 @@ class MyListViewController: UIViewController, UITableViewDelegate, UITableViewDa
 
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var menuButton: UIBarButtonItem!
-    
     var MyLists = [MyList]()
 
     override func viewDidLoad()
     {
         super.viewDidLoad()
-        
         tableView.delegate = self
         tableView.dataSource = self
-
         sideMenu()
-        
+
+    }
+    
+    // refresh cell everytime its appear
+    override func viewDidAppear(_ animated: Bool) {
         refreshCoreData()
         tableView.reloadData()
-
-        
     }
     
     //-------------------------------- refresh to see update cell after save
@@ -37,7 +36,6 @@ class MyListViewController: UIViewController, UITableViewDelegate, UITableViewDa
         let app = UIApplication.shared.delegate as! AppDelegate
         let context = app.persistentContainer.viewContext
         let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "MyList")
-        
         do
         {
             let results = try context.fetch(fetchRequest)
@@ -50,7 +48,8 @@ class MyListViewController: UIViewController, UITableViewDelegate, UITableViewDa
     }
     
     //display tableView
-    func numberOfSections(in tableView: UITableView) -> Int {
+    func numberOfSections(in tableView: UITableView) -> Int
+    {
         return 1
     }
     
@@ -72,22 +71,16 @@ class MyListViewController: UIViewController, UITableViewDelegate, UITableViewDa
             return MyListTableViewCell()
         }
     }
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
+    // get value of each row
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
+    {
         let Storyboard = UIStoryboard(name: "Main", bundle: nil)
         let DvC = Storyboard.instantiateViewController(withIdentifier: "DetailViewController") as! DetailViewController
         
         DvC.getMyLists = [MyLists[indexPath.row]]
         self.navigationController?.pushViewController(DvC, animated: true)
-        
     }
     
-    
-   
-
-    
-   
     // slide menu bat on left side
     func sideMenu()
     {
@@ -100,7 +93,5 @@ class MyListViewController: UIViewController, UITableViewDelegate, UITableViewDa
             view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
         }
     }
-    
-
 }
 

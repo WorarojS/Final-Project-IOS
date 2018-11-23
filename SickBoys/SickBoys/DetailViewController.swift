@@ -51,6 +51,8 @@ class DetailViewController: UIViewController {
                 typeTxf.backgroundColor = UIColor.green
             }
         }
-        reviewTxf!.layer.backgroundColor = UIColor.gray.cgColor
+        reviewTxf!.layer.backgroundColor = UIColor.gray.withAlphaComponent(0.2).cgColor
+        reviewTxf!.layer.borderWidth = 2
+        reviewTxf!.layer.borderColor = UIColor.gray.withAlphaComponent(0.8).cgColor
     }
 }

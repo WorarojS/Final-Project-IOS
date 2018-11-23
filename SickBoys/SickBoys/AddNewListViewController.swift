@@ -34,7 +34,9 @@ class AddNewListViewController: UIViewController, UITextFieldDelegate, UIImagePi
         self.reviewTxt.delegate = self
         
   
-        reviewTxt!.layer.backgroundColor = UIColor.gray.cgColor
+        reviewTxt!.layer.backgroundColor = UIColor.gray.withAlphaComponent(0.2).cgColor
+        reviewTxt!.layer.borderWidth = 2
+        reviewTxt!.layer.borderColor = UIColor.gray.withAlphaComponent(0.8).cgColor
         
         //--------------------------------select Image
         imagePicker = UIImagePickerController()
