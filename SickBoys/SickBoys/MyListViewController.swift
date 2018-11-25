@@ -81,6 +81,25 @@ class MyListViewController: UIViewController, UITableViewDelegate, UITableViewDa
         self.navigationController?.pushViewController(DvC, animated: true)
     }
     
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        
+        if editingStyle == .delete {
+            
+            let app = UIApplication.shared.delegate as! AppDelegate
+            let context = app.persistentContainer.viewContext
+            
+            context.delete(self.MyLists[indexPath.row])
+            
+           self.MyLists.remove(at: indexPath.row)
+            tableView.deleteRows(at: [indexPath], with: .fade)
+            
+        }
+    }
+    
     // slide menu bat on left side
     func sideMenu()
     {
