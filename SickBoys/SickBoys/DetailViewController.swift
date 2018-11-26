@@ -9,7 +9,7 @@
 import UIKit
 import CoreData
 
-class DetailViewController: UIViewController {
+class DetailViewController: UIViewController, UITextViewDelegate {
     
     @IBOutlet weak var imgView: UIImageView!
     @IBOutlet weak var nameTxf: UITextField!
@@ -25,6 +25,14 @@ class DetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.reviewTxf.delegate = self
+        typeTxf.layer.borderColor = UIColor.gray.withAlphaComponent(0.1).cgColor
+        typeTxf.layer.borderWidth = 1.0
+        
+        //The rounded corner part, where you specify your view's corner radius:
+        typeTxf.layer.cornerRadius = 5
+        
 //        refreshCoreData()
         
         for MyLists in getMyLists {
@@ -51,8 +59,7 @@ class DetailViewController: UIViewController {
                 typeTxf.backgroundColor = UIColor.green
             }
         }
-        reviewTxf!.layer.backgroundColor = UIColor.gray.withAlphaComponent(0.2).cgColor
-        reviewTxf!.layer.borderWidth = 2
-        reviewTxf!.layer.borderColor = UIColor.gray.withAlphaComponent(0.8).cgColor
+        
+       
     }
 }

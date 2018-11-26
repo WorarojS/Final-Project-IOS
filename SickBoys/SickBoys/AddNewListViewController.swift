@@ -34,9 +34,16 @@ class AddNewListViewController: UIViewController, UITextFieldDelegate, UIImagePi
         self.reviewTxt.delegate = self
         
   
-        reviewTxt!.layer.backgroundColor = UIColor.gray.withAlphaComponent(0.2).cgColor
-        reviewTxt!.layer.borderWidth = 2
-        reviewTxt!.layer.borderColor = UIColor.gray.withAlphaComponent(0.8).cgColor
+//        reviewTxt!.layer.backgroundColor = UIColor.gray.withAlphaComponent(0.2).cgColor
+//        reviewTxt!.layer.borderWidth = 2
+//        reviewTxt!.layer.borderColor = UIColor.gray.withAlphaComponent(0.8).cgColor
+        
+        reviewTxt.layer.borderColor = UIColor.gray.withAlphaComponent(0.1).cgColor
+        reviewTxt.layer.borderWidth = 1.0
+        
+        //The rounded corner part, where you specify your view's corner radius:
+        reviewTxt.layer.cornerRadius = 5
+      
         
         //--------------------------------select Image
         imagePicker = UIImagePickerController()
