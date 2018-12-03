@@ -15,11 +15,25 @@ class MyListTableViewCell: UITableViewCell {
     @IBOutlet weak var nameLbl: UILabel!
     @IBOutlet weak var typeLbl: UITextField!
     @IBOutlet weak var dateLbl: UITextField!
+    @IBOutlet weak var pointLbl: UITextField!
+    
+    @IBOutlet var pointBtn: [UIButton]!
+    
+    
+    var rate: String!
+    
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
         
+        pointLbl.isHidden = true
+        
+        
+        
+        
+        
+         //make star color when taped
+       
     }
     
     
@@ -30,6 +44,28 @@ class MyListTableViewCell: UITableViewCell {
         nameLbl.text = myList.name
         typeLbl.text = myList.type
         dateLbl.text = myList.date
+        pointLbl.text = myList.point
+        
+        let point: Int? = Int(pointLbl.text!)
+        let points = point! - 1
+        
+        
+        for button in pointBtn
+        {
+            if button.tag <= points
+            {
+                // selected
+                button.setTitle("☠︎", for: .normal)
+                
+                // print(tag)
+            }else
+            {
+                // not selected
+                button.setTitle(" ", for: .normal)
+            }
+            
+            
+        }
         //-------------------------------- change txtBG color
         if myList.type == "Sativa"
         {
@@ -46,6 +82,11 @@ class MyListTableViewCell: UITableViewCell {
             typeLbl.backgroundColor = UIColor.green
         }
     }
+    
+ 
+  
+    
+    
     
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)

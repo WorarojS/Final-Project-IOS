@@ -10,16 +10,20 @@ import UIKit
 import CoreData
 
 
-class AddNewListViewController: UIViewController, UITextFieldDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextViewDelegate {
+class AddNewListViewController: UIViewController, UITextFieldDelegate, UIImagePickerControllerDelegate,
+UINavigationControllerDelegate, UITextViewDelegate {
 
+    @IBOutlet var starBtn: [UIButton]!
     @IBOutlet weak var nameTxt: UITextField!
     @IBOutlet weak var ImgView: UIImageView!
     @IBOutlet weak var dateTxt: UITextField!
     @IBOutlet weak var typeTxt: UITextField!
     @IBOutlet weak var reviewTxt: UITextView!
+    @IBOutlet weak var pointTxt: UITextView!
     
     @IBOutlet weak var SelectPictureBtn: UIButton!
     
+
     var imagePicker: UIImagePickerController!
     let type = ["Sativa","Hybrid","Indica"]
     var selectedType: String?
@@ -32,6 +36,11 @@ class AddNewListViewController: UIViewController, UITextFieldDelegate, UIImagePi
          //--------------------------------Review Textview
         self.nameTxt.delegate = self
         self.reviewTxt.delegate = self
+        pointTxt.isHidden = true
+        
+ 
+        
+    
         
   
 //        reviewTxt!.layer.backgroundColor = UIColor.gray.withAlphaComponent(0.2).cgColor
@@ -128,11 +137,55 @@ class AddNewListViewController: UIViewController, UITextFieldDelegate, UIImagePi
         reviewTxt.text = ""
     }
     
+    
+    
+    func displayMyAlertMessage(userMessage:String){
+        
+        let myAlert = UIAlertController(title: "Ops!", message: userMessage, preferredStyle: UIAlertController.Style.alert)
+        let okAction = UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: nil)
+        myAlert.addAction(okAction)
+        self.present(myAlert, animated: true, completion: nil)
+    }
+    
+    
+    
     //--------------------------------save function to db
     @IBAction func saveBtnClicked(_ sender: Any)
     {
-        //--------------------------------check if name isn't empty
-        if let name = nameTxt.text, name != ""
+        let name = nameTxt.text
+        let star = pointTxt.text
+        let review = reviewTxt.text
+        let type = typeTxt.text
+        let pic = ImgView.image
+        
+        // check if its empty
+        if (name!.isEmpty)
+        {
+            displayMyAlertMessage (userMessage: "Please fill name")
+            return
+        }
+        else if (review!.isEmpty)
+        {
+            displayMyAlertMessage (userMessage: "Please fill your review")
+            return
+        }
+        else if (type!.isEmpty)
+        {
+            displayMyAlertMessage (userMessage: "Please choese type")
+            return
+        }
+        else if (star!.isEmpty)
+        {
+            displayMyAlertMessage (userMessage: "Please rate")
+            return
+        }
+        else if (pic == nil)
+        {
+            displayMyAlertMessage (userMessage: "Please choese a picture")
+            return
+        }
+        else
+            // if not empty the run
         {
             let app = UIApplication.shared.delegate as! AppDelegate
             let context = app.persistentContainer.viewContext
@@ -140,10 +193,11 @@ class AddNewListViewController: UIViewController, UITextFieldDelegate, UIImagePi
             let myList = MyList(entity: entity, insertInto: context)
 
             //--------------------------------save to db
-            myList.name = name
+            myList.name = nameTxt.text
             myList.type = typeTxt.text
             myList.date = dateTxt.text
             myList.review = reviewTxt.text
+            myList.point = pointTxt.text
             myList.setProductImage(img: ImgView.image!)
             context.insert(myList)
 
@@ -160,6 +214,52 @@ class AddNewListViewController: UIViewController, UITextFieldDelegate, UIImagePi
         }
         navigationController?.popViewController(animated: true)
     }
+    
+    
+    
+    // star button
+    @IBAction func starBtnTapped(_ sender: UIButton) {
+        // rating point
+        let tag = sender.tag
+        
+      
+        
+       // make star color when taped
+        for button in starBtn
+        {
+            if button.tag <= tag
+            {
+                // selected
+                button.setTitle("★", for: .normal)
+                
+                // print(tag)
+            }else
+            {
+                // not selected
+                button.setTitle("☆", for: .normal)
+            }
+        }
+        if tag == 0 {
+            return pointTxt.text = "1"
+        }
+        else if tag == 1
+        {
+            return pointTxt.text = "2"
+        }
+        else if tag == 2
+        {
+            return pointTxt.text = "3"
+        }
+        else if tag == 3
+        {
+            return pointTxt.text = "4"
+        }
+        else
+        {
+            return pointTxt.text = "5"
+        }
+    }
+    
 }
 
 

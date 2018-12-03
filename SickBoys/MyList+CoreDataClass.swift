@@ -22,7 +22,7 @@ public class MyList: NSManagedObject {
     
     func getProductImage() -> UIImage
     {
-        let img = UIImage(data: self.image as! Data)!
+        let img = UIImage(data: self.image! as Data)!
         return img
     }
 
