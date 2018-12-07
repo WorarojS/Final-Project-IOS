@@ -37,6 +37,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="separatorColor" red="0.061388587369999997" green="0.38195986679999999" blue="0.028347907360000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="sectionIndexBackgroundColor" red="0.061388587369999997" green="0.38195986679999999" blue="0.028347907360000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <sections>
                             <tableViewSection id="9PH-ak-Ksi">
                                 <cells>
@@ -234,7 +236,25 @@
                     <view key="view" contentMode="scaleToFill" id="sOA-ki-kly">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="This feature is unavlible on Prototype V.1.0.1" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ibS-s0-dx5">
+                                <rect key="frame" x="16" y="391" width="343" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="A6l-4d-RSU"/>
+                                    <constraint firstAttribute="width" constant="343" id="MCh-X6-nfp"/>
+                                </constraints>
+                                <color key="textColor" red="0.54895968260000005" green="0.54895968260000005" blue="0.54895968260000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Fwt-OM-5kg" firstAttribute="bottom" secondItem="ibS-s0-dx5" secondAttribute="bottom" constant="357" id="0Xc-0D-3Dc"/>
+                            <constraint firstItem="Fwt-OM-5kg" firstAttribute="trailing" secondItem="ibS-s0-dx5" secondAttribute="trailing" constant="16" id="RBW-Vk-65W"/>
+                            <constraint firstItem="ibS-s0-dx5" firstAttribute="leading" secondItem="Fwt-OM-5kg" secondAttribute="leading" constant="16" id="ajA-f4-zCH"/>
+                            <constraint firstItem="ibS-s0-dx5" firstAttribute="top" secondItem="Fwt-OM-5kg" secondAttribute="top" constant="303" id="gj7-a0-aeF"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Fwt-OM-5kg"/>
                     </view>
                     <navigationItem key="navigationItem" title="Popular" id="1Cy-LL-KDF">
@@ -261,7 +281,25 @@
                     <view key="view" contentMode="scaleToFill" id="k4C-OS-u7I">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="This feature is unavlible on Prototype V.1.0.1" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6JF-Rg-UAx">
+                                <rect key="frame" x="16" y="391" width="343" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="TQD-iX-FJJ"/>
+                                    <constraint firstAttribute="width" constant="343" id="vp4-73-q83"/>
+                                </constraints>
+                                <color key="textColor" red="0.54895968260000005" green="0.54895968260000005" blue="0.54895968260000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="6JF-Rg-UAx" firstAttribute="leading" secondItem="37e-QW-VQy" secondAttribute="leading" constant="16" id="N7a-Yn-osN"/>
+                            <constraint firstItem="6JF-Rg-UAx" firstAttribute="top" secondItem="37e-QW-VQy" secondAttribute="top" constant="303" id="Tfi-09-Bhb"/>
+                            <constraint firstItem="37e-QW-VQy" firstAttribute="bottom" secondItem="6JF-Rg-UAx" secondAttribute="bottom" constant="357" id="dWl-1I-zOD"/>
+                            <constraint firstItem="37e-QW-VQy" firstAttribute="trailing" secondItem="6JF-Rg-UAx" secondAttribute="trailing" constant="16" id="tpq-X2-OfP"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="37e-QW-VQy"/>
                     </view>
                     <navigationItem key="navigationItem" title="Home" id="xk8-gk-kul">
@@ -285,6 +323,10 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="PsG-3V-QwT">
                         <rect key="frame" x="0.0" y="44" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.061388587369999997" green="0.38195986679999999" blue="0.028347907360000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -302,8 +344,26 @@
                     <view key="view" contentMode="scaleAspectFit" id="vAV-96-crf">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="This feature is unavlible on Prototype V.1.0.1" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5Wx-Nr-mYZ">
+                                <rect key="frame" x="16" y="391" width="343" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="1ur-L1-cyc"/>
+                                    <constraint firstAttribute="width" constant="343" id="2cC-08-qUT"/>
+                                </constraints>
+                                <color key="textColor" red="0.54895968260000005" green="0.54895968260000005" blue="0.54895968260000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="5Wx-Nr-mYZ" firstAttribute="top" secondItem="6pl-mh-oPP" secondAttribute="top" constant="303" id="7Mo-NY-yTp"/>
+                            <constraint firstItem="5Wx-Nr-mYZ" firstAttribute="leading" secondItem="6pl-mh-oPP" secondAttribute="leading" constant="16" id="Axl-hG-EKE"/>
+                            <constraint firstItem="6pl-mh-oPP" firstAttribute="bottom" secondItem="5Wx-Nr-mYZ" secondAttribute="bottom" constant="357" id="Ef9-vr-a5a"/>
+                            <constraint firstItem="6pl-mh-oPP" firstAttribute="trailing" secondItem="5Wx-Nr-mYZ" secondAttribute="trailing" constant="16" id="K1L-gS-985"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6pl-mh-oPP"/>
                     </view>
                     <navigationItem key="navigationItem" title="News" id="x8u-Wc-Qsh">
@@ -317,7 +377,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nwj-CD-3HU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-759" y="2081"/>
+            <point key="canvasLocation" x="-759.20000000000005" y="2080.7881773399017"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="ebn-gQ-Oqt">
@@ -327,6 +387,10 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="zaA-Wp-V8J">
                         <rect key="frame" x="0.0" y="44" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.061388587369999997" green="0.38195986679999999" blue="0.028347907360000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -344,7 +408,25 @@
                     <view key="view" contentMode="scaleToFill" id="N7C-sK-xbY">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="This feature is unavlible on Prototype V.1.0.1" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9j9-ZF-hnj">
+                                <rect key="frame" x="16" y="379" width="343" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Gcq-72-uNq"/>
+                                    <constraint firstAttribute="width" constant="343" id="i03-Om-DiD"/>
+                                </constraints>
+                                <color key="textColor" red="0.54895968260000005" green="0.54895968260000005" blue="0.54895968260000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="H4R-Kg-V6V" firstAttribute="bottom" secondItem="9j9-ZF-hnj" secondAttribute="bottom" constant="369" id="Zo7-Sc-6Hy"/>
+                            <constraint firstItem="9j9-ZF-hnj" firstAttribute="top" secondItem="H4R-Kg-V6V" secondAttribute="top" constant="291" id="dhi-Uv-9JZ"/>
+                            <constraint firstItem="9j9-ZF-hnj" firstAttribute="leading" secondItem="H4R-Kg-V6V" secondAttribute="leading" constant="16" id="k71-VL-uQH"/>
+                            <constraint firstItem="H4R-Kg-V6V" firstAttribute="trailing" secondItem="9j9-ZF-hnj" secondAttribute="trailing" constant="16" id="tIW-tO-YYn"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="H4R-Kg-V6V"/>
                     </view>
                     <navigationItem key="navigationItem" title="Newest" id="Xh4-ql-XYt">
@@ -367,7 +449,25 @@
                     <view key="view" contentMode="scaleAspectFit" id="LXP-Sy-fyL">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="This feature is unavlible on Prototype V.1.0.1" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3zy-Ws-qqt">
+                                <rect key="frame" x="16" y="391" width="343" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="343" id="Jga-qq-RGy"/>
+                                    <constraint firstAttribute="height" constant="30" id="zS7-Hv-SK0"/>
+                                </constraints>
+                                <color key="textColor" red="0.54895968260000005" green="0.54895968260000005" blue="0.54895968260000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="3zy-Ws-qqt" firstAttribute="top" secondItem="wg4-TJ-Xu6" secondAttribute="top" constant="303" id="JQ7-NH-vn7"/>
+                            <constraint firstItem="wg4-TJ-Xu6" firstAttribute="trailing" secondItem="3zy-Ws-qqt" secondAttribute="trailing" constant="16" id="MSb-f4-2aM"/>
+                            <constraint firstItem="wg4-TJ-Xu6" firstAttribute="bottom" secondItem="3zy-Ws-qqt" secondAttribute="bottom" constant="357" id="USv-82-hId"/>
+                            <constraint firstItem="3zy-Ws-qqt" firstAttribute="leading" secondItem="wg4-TJ-Xu6" secondAttribute="leading" constant="16" id="Wjp-eM-BHi"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="wg4-TJ-Xu6"/>
                     </view>
                     <navigationItem key="navigationItem" title="About" id="GQ2-uU-Spi">
@@ -391,6 +491,10 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Be8-eC-NZD">
                         <rect key="frame" x="0.0" y="44" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.061388587369999997" green="0.38195986679999999" blue="0.028347907360000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -409,6 +513,10 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Uo5-ZG-QRg">
                         <rect key="frame" x="0.0" y="44" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.061388587369999997" green="0.38195986679999999" blue="0.028347907360000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -481,7 +589,9 @@
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d1B-LP-6u8">
                                                             <rect key="frame" x="0.0" y="0.0" width="30" height="42"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                                            <state key="normal" title="☆"/>
+                                                            <state key="normal" title="☆">
+                                                                <color key="titleColor" red="0.11596883149999999" green="0.75961690989999997" blue="0.060013674420000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            </state>
                                                             <connections>
                                                                 <action selector="starBtnTapped:" destination="dIR-kO-dhB" eventType="touchUpInside" id="0vb-PT-FUR"/>
                                                             </connections>
@@ -489,7 +599,9 @@
                                                         <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YAB-D5-qVb">
                                                             <rect key="frame" x="40" y="0.0" width="30" height="42"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                                            <state key="normal" title="☆"/>
+                                                            <state key="normal" title="☆">
+                                                                <color key="titleColor" red="0.11596883149999999" green="0.75961690989999997" blue="0.060013674420000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            </state>
                                                             <connections>
                                                                 <action selector="starBtnTapped:" destination="dIR-kO-dhB" eventType="touchUpInside" id="QGg-fi-yEb"/>
                                                             </connections>
@@ -497,7 +609,9 @@
                                                         <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pbq-S3-gjG">
                                                             <rect key="frame" x="80" y="0.0" width="30" height="42"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                                            <state key="normal" title="☆"/>
+                                                            <state key="normal" title="☆">
+                                                                <color key="titleColor" red="0.11596883149999999" green="0.75961690989999997" blue="0.060013674420000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            </state>
                                                             <connections>
                                                                 <action selector="starBtnTapped:" destination="dIR-kO-dhB" eventType="touchUpInside" id="hkV-6L-axH"/>
                                                             </connections>
@@ -505,7 +619,9 @@
                                                         <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rsf-6D-Lyp">
                                                             <rect key="frame" x="120" y="0.0" width="30" height="42"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                                            <state key="normal" title="☆"/>
+                                                            <state key="normal" title="☆">
+                                                                <color key="titleColor" red="0.11596883149999999" green="0.75961690989999997" blue="0.060013674420000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            </state>
                                                             <connections>
                                                                 <action selector="starBtnTapped:" destination="dIR-kO-dhB" eventType="touchUpInside" id="I6A-j0-aVl"/>
                                                             </connections>
@@ -513,7 +629,9 @@
                                                         <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q5C-c9-E3g">
                                                             <rect key="frame" x="160" y="0.0" width="30" height="42"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                                            <state key="normal" title="☆"/>
+                                                            <state key="normal" title="☆">
+                                                                <color key="titleColor" red="0.11596883149999999" green="0.75961690989999997" blue="0.060013674420000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            </state>
                                                             <connections>
                                                                 <action selector="starBtnTapped:" destination="dIR-kO-dhB" eventType="touchUpInside" id="ijL-fb-W1M"/>
                                                             </connections>
@@ -568,7 +686,7 @@
                             <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Add" id="yz8-f0-IwD">
-                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
                                 <segue destination="dIR-kO-dhB" kind="show" id="GWf-bz-c48"/>
                             </connections>
@@ -591,7 +709,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6Bw-Hq-cUq">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6Bw-Hq-cUq">
                                 <rect key="frame" x="67" y="138" width="240" height="240"/>
                                 <color key="backgroundColor" red="0.54895968260000005" green="0.54895968260000005" blue="0.54895968260000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -655,7 +773,9 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vwK-xg-4tC">
                                         <rect key="frame" x="0.0" y="0.0" width="30" height="42"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                        <state key="normal" title="☆"/>
+                                        <state key="normal" title="☆">
+                                            <color key="titleColor" red="0.11596883149806064" green="0.7596169099472081" blue="0.060013674422952426" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
                                         <connections>
                                             <action selector="starBtnTapped:" destination="dIR-kO-dhB" eventType="touchUpInside" id="fJw-cN-uqz"/>
                                         </connections>
@@ -663,7 +783,9 @@
                                     <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mhr-VK-JyF">
                                         <rect key="frame" x="40" y="0.0" width="30" height="42"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                        <state key="normal" title="☆"/>
+                                        <state key="normal" title="☆">
+                                            <color key="titleColor" red="0.11596883149806064" green="0.7596169099472081" blue="0.060013674422952426" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
                                         <connections>
                                             <action selector="starBtnTapped:" destination="dIR-kO-dhB" eventType="touchUpInside" id="oTd-Jv-CsI"/>
                                         </connections>
@@ -671,7 +793,9 @@
                                     <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cw4-aH-0c4">
                                         <rect key="frame" x="80" y="0.0" width="30" height="42"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                        <state key="normal" title="☆"/>
+                                        <state key="normal" title="☆">
+                                            <color key="titleColor" red="0.11596883149806064" green="0.7596169099472081" blue="0.060013674422952426" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
                                         <connections>
                                             <action selector="starBtnTapped:" destination="dIR-kO-dhB" eventType="touchUpInside" id="CkA-fS-RaE"/>
                                         </connections>
@@ -679,7 +803,9 @@
                                     <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EMA-l1-age">
                                         <rect key="frame" x="120" y="0.0" width="30" height="42"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                        <state key="normal" title="☆"/>
+                                        <state key="normal" title="☆">
+                                            <color key="titleColor" red="0.11596883149806064" green="0.7596169099472081" blue="0.060013674422952426" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
                                         <connections>
                                             <action selector="starBtnTapped:" destination="dIR-kO-dhB" eventType="touchUpInside" id="PIS-nE-OS1"/>
                                         </connections>
@@ -687,7 +813,9 @@
                                     <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="efF-Qc-Um0">
                                         <rect key="frame" x="160" y="0.0" width="30" height="42"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                        <state key="normal" title="☆"/>
+                                        <state key="normal" title="☆">
+                                            <color key="titleColor" red="0.11596883149806064" green="0.7596169099472081" blue="0.060013674422952426" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
                                         <connections>
                                             <action selector="starBtnTapped:" destination="dIR-kO-dhB" eventType="touchUpInside" id="l8K-wj-BWS"/>
                                         </connections>
@@ -760,7 +888,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Vtk-U9-zmn">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Vtk-U9-zmn">
                                 <rect key="frame" x="67" y="94" width="240" height="240"/>
                                 <color key="backgroundColor" red="0.54895968260000005" green="0.54895968260000005" blue="0.54895968260000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -805,7 +933,9 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zhX-DZ-lUp">
                                         <rect key="frame" x="0.0" y="0.0" width="30" height="42"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                        <state key="normal" title="☆"/>
+                                        <state key="normal" title="☆">
+                                            <color key="titleColor" red="0.11596883149999999" green="0.75961690989999997" blue="0.060013674420000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
                                         <connections>
                                             <action selector="starBtnTapped:" destination="dIR-kO-dhB" eventType="touchUpInside" id="jXp-Yk-dhb"/>
                                         </connections>
@@ -813,7 +943,9 @@
                                     <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8on-GP-Yuv">
                                         <rect key="frame" x="40" y="0.0" width="30" height="42"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                        <state key="normal" title="☆"/>
+                                        <state key="normal" title="☆">
+                                            <color key="titleColor" red="0.11596883149999999" green="0.75961690989999997" blue="0.060013674420000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
                                         <connections>
                                             <action selector="starBtnTapped:" destination="dIR-kO-dhB" eventType="touchUpInside" id="Ced-xp-gIr"/>
                                         </connections>
@@ -821,7 +953,9 @@
                                     <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dpe-Kx-9nh">
                                         <rect key="frame" x="80" y="0.0" width="30" height="42"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                        <state key="normal" title="☆"/>
+                                        <state key="normal" title="☆">
+                                            <color key="titleColor" red="0.11596883149999999" green="0.75961690989999997" blue="0.060013674420000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
                                         <connections>
                                             <action selector="starBtnTapped:" destination="dIR-kO-dhB" eventType="touchUpInside" id="aGC-Z4-5Fa"/>
                                         </connections>
@@ -829,7 +963,9 @@
                                     <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZAF-bP-1Y9">
                                         <rect key="frame" x="120" y="0.0" width="30" height="42"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                        <state key="normal" title="☆"/>
+                                        <state key="normal" title="☆">
+                                            <color key="titleColor" red="0.11596883149999999" green="0.75961690989999997" blue="0.060013674420000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
                                         <connections>
                                             <action selector="starBtnTapped:" destination="dIR-kO-dhB" eventType="touchUpInside" id="7in-je-YDi"/>
                                         </connections>
@@ -837,7 +973,9 @@
                                     <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qhs-pO-Foz">
                                         <rect key="frame" x="160" y="0.0" width="30" height="42"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                        <state key="normal" title="☆"/>
+                                        <state key="normal" title="☆">
+                                            <color key="titleColor" red="0.11596883149999999" green="0.75961690989999997" blue="0.060013674420000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
                                         <connections>
                                             <action selector="starBtnTapped:" destination="dIR-kO-dhB" eventType="touchUpInside" id="bze-75-MoU"/>
                                         </connections>
@@ -908,6 +1046,10 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="zdw-qX-9s4">
                         <rect key="frame" x="0.0" y="44" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.061388587369999997" green="0.38195986679999999" blue="0.028347907360000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -926,6 +1068,10 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="lcs-yX-8uJ">
                         <rect key="frame" x="0.0" y="44" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.061388587369999997" green="0.38195986679999999" blue="0.028347907360000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -941,6 +1087,6 @@
         <image name="logo" width="200" height="200"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="6Rd-AW-Oql"/>
+        <segue reference="BWk-ch-OiF"/>
     </inferredMetricsTieBreakers>
 </document>

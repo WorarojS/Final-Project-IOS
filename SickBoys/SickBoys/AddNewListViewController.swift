@@ -27,26 +27,26 @@ UINavigationControllerDelegate, UITextViewDelegate {
     var imagePicker: UIImagePickerController!
     let type = ["Sativa","Hybrid","Indica"]
     var selectedType: String?
-    
+    var defaultImg: UIImage?
 
     override func viewDidLoad()
     {
         super.viewDidLoad()
+        
+      
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(createTypePicker), name: UIResponder.keyboardWillShowNotification, object: nil)
+        
+
         
          //--------------------------------Review Textview
         self.nameTxt.delegate = self
         self.reviewTxt.delegate = self
         pointTxt.isHidden = true
         
- 
-        
-    
-        
-  
-//        reviewTxt!.layer.backgroundColor = UIColor.gray.withAlphaComponent(0.2).cgColor
-//        reviewTxt!.layer.borderWidth = 2
-//        reviewTxt!.layer.borderColor = UIColor.gray.withAlphaComponent(0.8).cgColor
-        
+
         reviewTxt.layer.borderColor = UIColor.gray.withAlphaComponent(0.1).cgColor
         reviewTxt.layer.borderWidth = 1.0
         
@@ -63,7 +63,6 @@ UINavigationControllerDelegate, UITextViewDelegate {
         ImgView.clipsToBounds = true
         
         createTypePicker()
-        createToolbar()
         
         //-------------------------------- auto generate date
         let date = Date()
@@ -74,6 +73,17 @@ UINavigationControllerDelegate, UITextViewDelegate {
         dateTxt.text = result
         reviewTxt.delegate = self
     }
+    
+    // show and hide keyboard when tap textview
+    @objc func keyboardWillShow(sender: NSNotification) {
+        self.view.frame.origin.y -= 150
+    }
+    @objc func keyboardWillHide(sender: NSNotification) {
+        self.view.frame.origin.y += 150
+    }
+    
+    
+    
     
     
     //--------------------------------Button function
@@ -105,7 +115,7 @@ UINavigationControllerDelegate, UITextViewDelegate {
 
     
     //--------------------------------picker function
-    func createTypePicker()
+    @objc func createTypePicker()
     {
         let typePick = UIPickerView()
         typePick.delegate = self
@@ -115,21 +125,7 @@ UINavigationControllerDelegate, UITextViewDelegate {
     }
     
     //--------------------------------make done button on tool bar
-    func createToolbar()
-    {
-        let toolBar = UIToolbar()
-        toolBar.sizeToFit()
-        let doneButton = UIBarButtonItem(title: "Done", style: .plain, target: self, action: #selector(AddNewListViewController.dismissKeyboard))
-        toolBar.setItems([doneButton], animated: false)
-        toolBar.isUserInteractionEnabled = true
-        typeTxt.inputAccessoryView = toolBar
-    }
-    
-    //--------------------------------function of done button
-    @objc func dismissKeyboard()
-    {
-        view.endEditing(true)
-    }
+   
     
     //--------------------------------set reviewTxt to empty when clicked
     func textViewDidBeginEditing(_ textView: UITextView)
@@ -159,29 +155,40 @@ UINavigationControllerDelegate, UITextViewDelegate {
         let pic = ImgView.image
         
         // check if its empty
-        if (name!.isEmpty)
+        if (reviewTxt.text == "Review"),(type!.isEmpty),(star!.isEmpty),(pic == nil)
         {
-            displayMyAlertMessage (userMessage: "Please fill name")
+            nameTxt.text = "-"
+            reviewTxt.text = "-"
+            typeTxt.text = "-"
+            pointTxt.text = "1"
+            let yourImage: UIImage = UIImage(named: "logo")!
+            ImgView.image = yourImage
             return
         }
-        else if (review!.isEmpty)
+        else if (name!.isEmpty)
         {
-            displayMyAlertMessage (userMessage: "Please fill your review")
+            nameTxt.text = "-"
+            return
+        }
+        else if (review?.isEmpty)!
+        {
+            reviewTxt.text = "-"
             return
         }
         else if (type!.isEmpty)
         {
-            displayMyAlertMessage (userMessage: "Please choese type")
+            typeTxt.text = "-"
             return
         }
         else if (star!.isEmpty)
         {
-            displayMyAlertMessage (userMessage: "Please rate")
+            pointTxt.text = "1"
             return
         }
         else if (pic == nil)
         {
-            displayMyAlertMessage (userMessage: "Please choese a picture")
+            let yourImage: UIImage = UIImage(named: "logo")!
+            ImgView.image = yourImage
             return
         }
         else

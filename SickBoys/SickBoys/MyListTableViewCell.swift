@@ -55,7 +55,7 @@ class MyListTableViewCell: UITableViewCell {
             if button.tag <= points
             {
                 // selected
-                button.setTitle("☠︎", for: .normal)
+                button.setTitle("★", for: .normal)
                 
                 // print(tag)
             }else

@@ -76,6 +76,7 @@ class MyListViewController: UIViewController, UITableViewDelegate, UITableViewDa
     // get value of each row
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
     {
+              
         let Storyboard = UIStoryboard(name: "Main", bundle: nil)
         let DvC = Storyboard.instantiateViewController(withIdentifier: "DetailViewController") as! DetailViewController
         
