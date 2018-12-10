@@ -67,16 +67,14 @@ class DetailViewController: UIViewController, UITextViewDelegate {
                 if button.tag <= points
                 {
                     // selected
-                    button.setTitle("✮", for: .normal)
+                    button.setTitle("★", for: .normal)
                     
                     // print(tag)
                 }else
                 {
                     // not selected
-                    button.setTitle(" ", for: .normal)
+                    button.setTitle("☆", for: .normal)
                 }
-                
-                
             }
             
             
@@ -172,7 +170,9 @@ class DetailViewController: UIViewController, UITextViewDelegate {
     myList.type = typeTxf.text
     myList.date = dateTxf.text
     myList.review = reviewTxf.text
-    
+    myList.point = pointStr
+    myList.setProductImage(img: imgView.image!)
+
     context.insert(myList)
         
         

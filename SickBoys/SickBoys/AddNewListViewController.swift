@@ -106,12 +106,12 @@ UINavigationControllerDelegate, UITextViewDelegate {
         SelectPictureBtn.setTitle("", for: .normal)
     }
     
+    
     //--------------------------------end edit when tap outside the Review Textview
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?)
     {
         self.view.endEditing(true)
     }
-
 
     
     //--------------------------------picker function
@@ -123,8 +123,6 @@ UINavigationControllerDelegate, UITextViewDelegate {
     //--------------------------------color of picker
         typePick.backgroundColor = .white
     }
-    
-    //--------------------------------make done button on tool bar
    
     
     //--------------------------------set reviewTxt to empty when clicked
@@ -132,7 +130,6 @@ UINavigationControllerDelegate, UITextViewDelegate {
     {
         reviewTxt.text = ""
     }
-    
     
     
     func displayMyAlertMessage(userMessage:String){

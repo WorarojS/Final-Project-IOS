@@ -37,8 +37,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <color key="separatorColor" red="0.061388587369999997" green="0.38195986679999999" blue="0.028347907360000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <color key="sectionIndexBackgroundColor" red="0.061388587369999997" green="0.38195986679999999" blue="0.028347907360000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <sections>
                             <tableViewSection id="9PH-ak-Ksi">
                                 <cells>
@@ -237,7 +235,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="This feature is unavlible on Prototype V.1.0.1" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ibS-s0-dx5">
+                            <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="This feature is unavlible on Prototype V.1.0.1" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ibS-s0-dx5">
                                 <rect key="frame" x="16" y="391" width="343" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="A6l-4d-RSU"/>
@@ -259,7 +257,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Popular" id="1Cy-LL-KDF">
                         <barButtonItem key="leftBarButtonItem" title="Menu" image="logo" id="cWo-CD-INH">
-                            <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
                                 <action selector="menuBar:" destination="Xcv-jI-tVI" id="g0L-LS-83b"/>
                             </connections>
@@ -282,7 +280,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="This feature is unavlible on Prototype V.1.0.1" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6JF-Rg-UAx">
+                            <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="This feature is unavlible on Prototype V.1.0.1" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6JF-Rg-UAx">
                                 <rect key="frame" x="16" y="391" width="343" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="TQD-iX-FJJ"/>
@@ -304,7 +302,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Home" id="xk8-gk-kul">
                         <barButtonItem key="leftBarButtonItem" title="Menu" image="logo" id="qhF-dS-80Y">
-                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
@@ -345,7 +343,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="This feature is unavlible on Prototype V.1.0.1" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5Wx-Nr-mYZ">
+                            <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="This feature is unavlible on Prototype V.1.0.1" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5Wx-Nr-mYZ">
                                 <rect key="frame" x="16" y="391" width="343" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="1ur-L1-cyc"/>
@@ -368,7 +366,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="News" id="x8u-Wc-Qsh">
                         <barButtonItem key="leftBarButtonItem" title="Item" image="logo" style="done" id="NPI-4W-uyQ">
-                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
@@ -409,7 +407,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="This feature is unavlible on Prototype V.1.0.1" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9j9-ZF-hnj">
+                            <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="This feature is unavlible on Prototype V.1.0.1" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9j9-ZF-hnj">
                                 <rect key="frame" x="16" y="379" width="343" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="Gcq-72-uNq"/>
@@ -431,7 +429,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Newest" id="Xh4-ql-XYt">
                         <barButtonItem key="leftBarButtonItem" title="Menu" image="logo" id="QD5-hl-7Eg">
-                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
@@ -450,7 +448,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="This feature is unavlible on Prototype V.1.0.1" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3zy-Ws-qqt">
+                            <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="This feature is unavlible on Prototype V.1.0.1" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3zy-Ws-qqt">
                                 <rect key="frame" x="16" y="391" width="343" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="343" id="Jga-qq-RGy"/>
@@ -472,7 +470,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="About" id="GQ2-uU-Spi">
                         <barButtonItem key="leftBarButtonItem" title="Menu" image="logo" id="nlH-g1-kfy">
-                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
@@ -683,7 +681,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="My List" id="EDn-Fl-uZy">
                         <barButtonItem key="leftBarButtonItem" title="menu" image="logo" id="Qlr-Yh-pac">
-                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Add" id="yz8-f0-IwD">
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
