@@ -22,6 +22,7 @@ class AboutViewController: UIViewController {
     {
         if revealViewController() != nil
         {
+         
             menuButton.target = revealViewController()
             menuButton.action = #selector(SWRevealViewController.revealToggle(_:))
             revealViewController()?.rearViewRevealWidth = 275

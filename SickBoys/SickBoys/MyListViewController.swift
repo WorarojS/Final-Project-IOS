@@ -98,7 +98,7 @@ class MyListViewController: UIViewController, UITableViewDelegate, UITableViewDa
             context.delete(self.MyLists[indexPath.row])
             
            self.MyLists.remove(at: indexPath.row)
-            tableView.deleteRows(at: [indexPath], with: .fade)
+           tableView.deleteRows(at: [indexPath], with: .fade)
             
         }
     }

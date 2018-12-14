@@ -5,7 +5,6 @@
 //  Created by wrj.s on 2018-11-22.
 //  Copyright © 2018 wrj.s. All rights reserved.
 //
-
 import UIKit
 import CoreData
 
@@ -23,7 +22,7 @@ class DetailViewController: UIViewController, UITextViewDelegate {
     var editTextFieldToggle: Bool = false
     
     var pointStr = ""
-  
+    
     
     
     var getMyLists = [MyList]()
@@ -46,10 +45,10 @@ class DetailViewController: UIViewController, UITextViewDelegate {
         //The rounded corner part, where you specify your view's corner radius:
         typeTxf.layer.cornerRadius = 5
         
-//        refreshCoreData()
+        //        refreshCoreData()
         
         for MyLists in getMyLists {
-     print(MyLists.name!,MyLists.type!,MyLists.date!,MyLists.review!)
+            print(MyLists.name!,MyLists.type!,MyLists.date!,MyLists.review!)
             
             
             nameTxf.text = MyLists.name
@@ -121,9 +120,9 @@ class DetailViewController: UIViewController, UITextViewDelegate {
     }
     // active editable function
     func textFieldActive(){
-    //Turn things ON
-    nameTxf.isUserInteractionEnabled = true
-    reviewTxf.isEditable = true
+        //Turn things ON
+        nameTxf.isUserInteractionEnabled = true
+        reviewTxf.isEditable = true
         
         let alertController = UIAlertController(title: "Are you sure to Activate Editable?", message: "", preferredStyle: .alert)
         
@@ -158,37 +157,37 @@ class DetailViewController: UIViewController, UITextViewDelegate {
     
     
     func save(){
-    if let name = nameTxf.text, name != ""
-    {
-    let app = UIApplication.shared.delegate as! AppDelegate
-    let context = app.persistentContainer.viewContext
-    let entity = NSEntityDescription.entity( forEntityName: "MyList", in: context)!
-    let myList = MyList(entity: entity, insertInto: context)
-    
-    //--------------------------------save to db
-    myList.name = name
-    myList.type = typeTxf.text
-    myList.date = dateTxf.text
-    myList.review = reviewTxf.text
-    myList.point = pointStr
-    myList.setProductImage(img: imgView.image!)
-
-    context.insert(myList)
-        
-        
-    
-    //-------------------------------- if can save otherwise print Error
-    do
-    {
-    try context.save()
-    }
-    catch let error as NSError
-    {
-    print(error.debugDescription)
-    print("Error")
-    }
-    }
-    navigationController?.popViewController(animated: true)
+        if let name = nameTxf.text, name != ""
+        {
+            let app = UIApplication.shared.delegate as! AppDelegate
+            let context = app.persistentContainer.viewContext
+            let entity = NSEntityDescription.entity( forEntityName: "MyList", in: context)!
+            let myList = MyList(entity: entity, insertInto: context)
+            
+            //--------------------------------save to db
+            myList.name = name
+            myList.type = typeTxf.text
+            myList.date = dateTxf.text
+            myList.review = reviewTxf.text
+            myList.point = pointStr
+            myList.setProductImage(img: imgView.image!)
+            
+            context.insert(myList)
+            
+            
+            
+            //-------------------------------- if can save otherwise print Error
+            do
+            {
+                try context.save()
+            }
+            catch let error as NSError
+            {
+                print(error.debugDescription)
+                print("Error")
+            }
+        }
+        navigationController?.popViewController(animated: true)
     }
     
     // hide keyboard when touch outside textview

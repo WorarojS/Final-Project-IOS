@@ -22,4 +22,9 @@ class NewsDetailViewController: UIViewController {
         webView.load(URLRequest(url: URL(string: webUrl!)!))
 
         }
+    @IBAction func back(_ sender: Any) {
+        navigationController?.popViewController(animated: true)
+        
+        dismiss(animated: true, completion: nil)
+    }
 }

@@ -38,8 +38,6 @@ class News
         self.reference = json["reference"].stringValue
         self.credit = json["credit"].stringValue
         self.webUrl = json["webUrl"].stringValue
-        
-
     }
     
     
